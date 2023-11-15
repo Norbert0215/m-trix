@@ -1,0 +1,52 @@
+:root{
+    --bg: hsl(325, 97%, 50%);
+    --bg2: hsl(239, 97%, 50%);
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{width: 100%;}
+
+.container{
+    height: 100vh;
+    background-image: linear-gradient(to right,var(--bg), var(--bg2));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    row-gap: 5px;
+    flex-direction: column;
+}
+
+.matrix{
+    height: 50vh;
+    width: 50vh;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+button{
+    width: 5rem;
+    font-size: 1.2rem;
+    background-color: aliceblue;
+}
+
+.field{
+    box-shadow:0 0 10px 1px #000 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: rotate;
+    animation-duration: 3s;
+    animation-delay: 1s ;
+    
+}
+@keyframes rotate{
+    from{transform: rotate(0deg);}
+    to{transform: rotate(180deg);}
+}
+
+
